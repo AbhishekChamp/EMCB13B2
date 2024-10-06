@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    background-color: #28a745; /* Green color */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.navbar .nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .nav ul li {
+    margin: 0 15px;
+}
+
+.navbar .nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-container {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+    margin: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 30px;
+    background-color: white; /* Background for sticky effect */
+    z-index: 1000; /* Make sure it appears above other content */
+    margin-top: -1px; /* To merge with navbar */
+}
+
+.search-input {
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 16px;
+    width: 300px; /* Adjust width as needed */
+}
+
+.search-button {
+    background-color: #28a745; /* Same green color */
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: #218838; /* Darker green for hover */
+}
+
+.content {
+    padding: 20px;
+}
