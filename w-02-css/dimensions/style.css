@@ -1,0 +1,23 @@
+:root {
+    --main-bg: lightblue;
+    --second-bg: rgb(245, 219, 219);
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
+.header {
+    width: 60%;
+    background-color: var(--second-bg);
+}
+
+.full-height {
+    height: 100vh;
+    background-color: lightgreen;
+}
+
+.button {
+    padding: 1em;
+    font-size: 1.5rem;
+}

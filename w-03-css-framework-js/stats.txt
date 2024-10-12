@@ -1,0 +1,8 @@
+Bootstrap - 241 kB
+Tailwind - 372 kB
+Plain - 6.3 kB
+
+No Throttling - 328 ms
+Fast 4G - 827 ms
+Slow 4G - 2.56 sec
+3G - 8.9 sec
