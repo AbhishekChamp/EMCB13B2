@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aria Example</title>
+    </head>
+    <body>
+        <button aria-expanded="false" onclick="toggleMenu(this)">Menu</button>
+        <ul id="menu" hidden>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+
+        <script>
+            function toggleMenu(button) {
+                const menu = document.getElementById("menu");
+                const expanded =
+                    button.getAttribute("aria-expanded") === "true";
+                button.setAttribute("aria-expanded", !expanded);
+                menu.hidden = expanded;
+            }
+        </script>
+    </body>
+</html>

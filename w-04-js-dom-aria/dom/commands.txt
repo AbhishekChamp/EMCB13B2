@@ -1,0 +1,31 @@
+let root = document.documentElement; // <html> element
+console.log(root.nodeName); // Output: "HTML"
+
+let body = document.body; // Equivalent to document.getElementsByTagName('body')[0]
+console.log(body.nodeName); // Output: "BODY"
+
+let container = document.getElementById('container');
+console.log(container.nodeName); // Output: "DIV"
+
+let children = container.children; // HTMLCollection of child elements
+console.log(children.length); // Output: 4 (h1, p, p, button)
+
+// Access the first child
+let firstChild = children[0];
+console.log(firstChild.nodeName); // Output: "H1"
+
+// Access the second child
+let secondChild = children[1];
+console.log(secondChild.nodeName); // Output: "P"
+
+// Sibling seclection
+let firstParagraph = container.querySelector('p');
+let nextSibling = firstParagraph.nextElementSibling;
+console.log(nextSibling.nodeName); // Output: "P" (the second <p> element)
+
+let previousSibling = nextSibling.previousElementSibling;
+console.log(previousSibling.nodeName); // Output: "P" (the first <p> element)
+
+// Access parent node
+let parent = firstParagraph.parentNode;
+console.log(parent.nodeName); // Output: "DIV" (the <div> with id "container")
