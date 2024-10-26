@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tailwind Custom Screen Example</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            /* Custom styles can go here */
+        </style>
+    </head>
+    <body class="bg-gray-100 flex items-center justify-center h-screen">
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h1 class="text-2xl font-bold">Welcome to Tailwind CSS</h1>
+            <p class="mt-4">
+                Resize the window to see custom breakpoints in action!
+            </p>
+            <div class="mt-4">
+                <div class="hidden sm:block">
+                    This is visible on small screens and above.
+                </div>
+                <div class="hidden md:block">
+                    This is visible on medium screens and above.
+                </div>
+                <div class="hidden lg:block">
+                    This is visible on large screens and above.
+                </div>
+                <div class="hidden xl:block">
+                    This is visible on extra large screens and above.
+                </div>
+                <div class="hidden custom:block">
+                    This is visible on custom screens and above.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
