@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Review Slider</title>
+    </head>
+    <body>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide active">
+                    <p>"Highly recommend it to everyone."</p>
+                    <cite>- Customer A</cite>
+                </div>
+                <div class="slide">
+                    <p>"Great value for the price. Works as described."</p>
+                    <cite>- Customer B</cite>
+                </div>
+                <div class="slide">
+                    <p>
+                        "The quality is fantastic! I will definitely buy again."
+                    </p>
+                    <cite>- Customer C</cite>
+                </div>
+                <div class="slide">
+                    <p>
+                        "Not what I expected, but customer service was helpful."
+                    </p>
+                    <cite>- Customer D</cite>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
