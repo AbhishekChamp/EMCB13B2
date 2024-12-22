@@ -1,0 +1,40 @@
+services:
+    react-app:
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        ports:
+            - "5173:5173"
+        networks:
+            - my-network
+
+    express-app:
+        build:
+            context: ./backend
+            dockerfile: Dockerfile
+        ports:
+            - "3000:3000"
+        networks:
+            - my-network
+        depends_on:
+            - mongodb
+        environment:
+            PORT: 3000
+        env_file:
+            - ./backend/.env
+
+    mongodb:
+        build:
+            context: ./database
+            dockerfile: Dockerfile
+        ports:
+            - "27018:27017" # Map to port 27018 on the host
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: example
+        networks:
+            - my-network
+
+networks:
+    my-network:
+        driver: bridge

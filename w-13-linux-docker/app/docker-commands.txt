@@ -1,0 +1,13 @@
+docker build -t frontend .
+docker build -t backend .
+docker build -t database .
+
+docker network create mern-network
+
+docker run -d --name frontend --network mern-network frontend
+docker run -d --name backend --network mern-network backend
+docker run -d --name database --network mern-network database
+
+docker network inspect mern-network
+
+docker system prune -a
